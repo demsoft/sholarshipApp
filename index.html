@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCHOLARSHIP APPLICATION</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="img/FSB-LOGO.png" width="40%" alt="">
+
+    </div>
+    <div class="header-section">
+      <a href="Home">HOME</a>
+      <a href="About">ABOUT</a>
+      <a href="Contact">CONTACT</a>
+    </div>
+  </div>
+
+  <div class="main-body">
+    <center>
+    <h2>Welcome to scholarship board</h2>
+    <p>Motto:<i>We Care About Your Future</i></p>
+  </center>
+  </div>
+
+  
+  <div class="form">
+    <form action="form">
+     
+        <h2>Fill The form below </h2>
+      
+      <div class="inputone">
+        <label for="firstname">Enter your First name</label><br>
+        <input type="text" name="firstname" id="firstNameTxt" placeholder="Your first Name"><br>   
+        <label for="" class="error" id="firstNameErr"></label> <br>
+    </div>
+    <div class="inputone">
+        <label for="lastname">Enter your Last name</label><br>
+        <input type="text" name="Lastname" id="lastNameTxt" placeholder="Your last Name"> <br>  
+        <label for="" class="error" id="firstNameErr"></label> <br>
+    </div>
+    <div class="inputone">
+        <label for="age">Select your date of birth</label><br>
+        <input type="date"  name="age" id="dobTxt" placeholder="">  <br> 
+        <label for="" class="error" id="firstNameErr"></label><br> 
+    </div>
+    <div class="inputone">
+        <label for="gender">Select your Gender:</label><br>
+       <select name="gender" id="genderTxt">
+         <option value="">Select Your Gender</option><br>
+         <option value="sex">Male</option><br>
+         <option value="sex">Female</option><br>
+       </select>  <br>
+        <label for="" class="error" id="genderErr"></label> 
+    </div>
+      <!-- <h2>Select Your Country</h2><br>
+      <div class="flex">
+          <label for="continent">Select Continent</label>
+          <select id="continent" onchange="countryChange(this);">
+            <option value="empty">Select a Continent</option>
+            <option value="Africa">Africa</option>
+            <option value="Asia">Asia</option>
+            <option value="South America">South America</option>
+            <option value="North America">North America</option>
+          </select>
+          <br/>
+      <label for="country">Select a country</label>
+      <select id="country">
+        <option value="0">Select a country</option> <br><br><br><br>
+            
+      </div>    
+
+          
+      <label for="" class="error" id="genderErr"></label>  -->
+
+    
+        <label for="continent">Select Continent</label><br>
+        <select name="continent" class="select-cont"  id="continent-Txt"> 
+          <option value="empty">Select a Continent</option><br>
+          <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>
+          <option value="South America">South America</option>
+          <option value="North America">North America</option>
+        </select>
+        <label for="country">Select a Country</label>
+        <select name="" id="countryTxt"></select>
+        <option value="0"></option>
+      </div>
+
+    </div>
+
+    
+ </form>
+
+ 
+
+
+   <!-- footer start -->
+  <div class="footer">
+    <div class="footer1">
+      <ul class="footer-ul1">
+        <li>Login <span>|</span></li>
+        <li>Shop<span>|</span></li>
+        <li>Sign up for a Test class</li>
+      </ul>
+
+    </div>
+
+
+    <div class="footer-2">
+      <ul class="footer-ul">
+        <li>Terms & conditions<span>|</span></li>
+        <li>Privacy policy<span>|</span></li>
+        <li>FAQs</li>
+      </ul>
+      <p>&#169Copyright 2012-2021 Logical Operations, Inc. All rights reserved. <br>
+        All trademarks and logos are the property of their respective owners</p>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
