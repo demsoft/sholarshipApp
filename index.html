@@ -44,9 +44,12 @@
         <label for="" class="error" id="firstNameErr"></label> <br>
     </div>
     <div class="inputone">
-        <label for="age">Select your date of birth</label><br>
-        <input type="date"  name="age" id="dobTxt" placeholder="">  <br> 
-        <label for="" class="error" id="firstNameErr"></label><br> 
+        <label for="age">Select your Age</label><br>
+        <select name="gender" id="ageTxt">
+          <option value="">Select Your Age Range</option><br>
+          <option value="100">18 – 24</option><br>
+          <option value="80">25 – 30 </option><br>
+        </select>  <br>
     </div>
     <div class="inputone">
         <label for="gender">Select your Gender:</label><br>
@@ -76,22 +79,65 @@
 
           
       <label for="" class="error" id="genderErr"></label>  -->
-
-    
-        <label for="continent">Select Continent</label><br>
-        <select name="continent" class="select-cont"  id="continent-Txt"> 
-          <option value="empty">Select a Continent</option><br>
-          <option value="Africa">Africa</option>
-          <option value="Asia">Asia</option>
-          <option value="South America">South America</option>
-          <option value="North America">North America</option>
-        </select>
-        <label for="country">Select a Country</label>
-        <select name="" id="countryTxt"></select>
-        <option value="0"></option>
-      </div>
-
+      <script>
+        function myFunction() {
+          var value = document.getElementById("continent").value;
+          if (value == "1"){
+          document.getElementById("africa").style.display = "block";
+          document.getElementById("asia").style.display = "none";
+          document.getElementById("samerica").style.display = "none";
+        }else if(value == "2"){
+          document.getElementById("asia").style.display = "block";
+          document.getElementById("africa").style.display = "none";
+          document.getElementById("samerica").style.display = "none";
+        }else if (value == "3"){
+          document.getElementById("asia").style.display = "none";
+          document.getElementById("africa").style.display = "none";
+          document.getElementById("samerica").style.display = "block";
+        }
+        }       
+    </script>
+    <div class="inputone">
+      <label for="continent">Select Continent</label><br>
+      <select name="continent" class="select-cont" onchange="myFunction()" id="continent"> 
+        <option value="empty">Select a Continent</option><br>
+        <option value="1">Africa</option>
+        <option value="2">Asia</option>
+        <option value="3">South America</option>
+        <option value="4">North America</option>
+      </select>  
     </div>
+
+    <div style="display:none" id="africa" class="inputone">
+      <label for="country">Select a Country</label>
+      <select name="" class="select-cont" id="africanCountry">
+        <option value="">Select a Country</option><br>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Ghana">Ghana</option>
+        <option value="Kenya">Kenya</option>
+    </select>
+    </div>
+
+    <div style="display:none" id="asia" class="inputone">
+      <label for="country">Select a Country</label>
+      <select name="" class="select-cont" id="asiaCountry">
+        <option value="">Select a Country</option><br>
+        <option value="China">China</option>
+        <option value="Korea">Korea</option>
+        <option value="Malaysia">Malaysia</option>
+    </select>
+    </div>
+    <div style="display:none" id="samerica" class="inputone">
+      <label for="country">Select a Country</label>
+      <select name="" class="select-cont" id="samericaCountry">
+        <option value="">Select a Country</option><br>
+        <option value="Brazil">Brazil</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Paraguay">Paraguay</option>
+    </select>
+    </div>
+        
+      </div>
 
     
  </form>
