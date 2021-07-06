@@ -32,7 +32,7 @@
     <form action="form">
      
         <h2>Fill The form below </h2>
-      
+      <div class="flex-name">
       <div class="inputone">
         <label for="firstname">Enter your First name</label><br>
         <input type="text" name="firstname" id="firstNameTxt" placeholder="Your first Name"><br>   
@@ -43,12 +43,15 @@
         <input type="text" name="Lastname" id="lastNameTxt" placeholder="Your last Name"> <br>  
         <label for="" class="error" id="firstNameErr"></label> <br>
     </div>
+  </div>
     <div class="inputone">
         <label for="age">Select your Age</label><br>
         <select name="gender" id="ageTxt">
           <option value="">Select Your Age Range</option><br>
           <option value="100">18 – 24</option><br>
           <option value="80">25 – 30 </option><br>
+          <option value="50">31 – 35 </option><br>
+          <option value="30">36 – 40 </option><br>
         </select>  <br>
     </div>
     <div class="inputone">
@@ -79,24 +82,7 @@
 
           
       <label for="" class="error" id="genderErr"></label>  -->
-      <script>
-        function myFunction() {
-          var value = document.getElementById("continent").value;
-          if (value == "1"){
-          document.getElementById("africa").style.display = "block";
-          document.getElementById("asia").style.display = "none";
-          document.getElementById("samerica").style.display = "none";
-        }else if(value == "2"){
-          document.getElementById("asia").style.display = "block";
-          document.getElementById("africa").style.display = "none";
-          document.getElementById("samerica").style.display = "none";
-        }else if (value == "3"){
-          document.getElementById("asia").style.display = "none";
-          document.getElementById("africa").style.display = "none";
-          document.getElementById("samerica").style.display = "block";
-        }
-        }       
-    </script>
+      <div class="flex-country">
     <div class="inputone">
       <label for="continent">Select Continent</label><br>
       <select name="continent" class="select-cont" onchange="myFunction()" id="continent"> 
@@ -105,6 +91,7 @@
         <option value="2">Asia</option>
         <option value="3">South America</option>
         <option value="4">North America</option>
+        <option value="5">Others</option>
       </select>  
     </div>
 
@@ -136,7 +123,26 @@
         <option value="Paraguay">Paraguay</option>
     </select>
     </div>
-        
+    <div style="display:none" id="namerica" class="inputone">
+      <label for="country">Select a Country</label>
+      <select name="" class="select-cont" id="namericaCountry">
+        <option value="">Select a Country</option><br>
+        <option value="Canada">Canada</option>
+        <option value="Cuba">Cuba</option>
+        <option value="USA">USA</option>
+    </select>
+    </div>
+    <div style="display:none" id="restworld" class="inputone">
+      <label for="country">Select a Country</label>
+      <select name="" class="select-cont" id="restCountry">
+        <option value="">Select a Country</option><br>
+        <option value="Australia">Australia</option>
+        <option value="Indonesis">Indonesia</option>
+        <option value="Peru">Peru</option>
+    </select>
+    </div>
+  </div>
+    
       </div>
 
     
@@ -175,6 +181,6 @@
 
 
 
-  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
